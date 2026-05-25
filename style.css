@@ -1,342 +1,305 @@
+
+/* ==========================================================================
+   1. CSS ตัวแปรสีและค่าเริ่มต้น (Variables & Reset)
+   ========================================================================== */
 :root {
-  --bg-color: #f4f6fa;
-  --text-dark: #111827;
-  --text-gray: #4b5563;
-  --text-light-gray: #9ca3af;
-  --primary-purple: #6366f1;
-  --primary-dark: #1f2937;
-
-  /* Card Colors */
-  --card1-bg: #dbeafe;
-  --card1-border: #64748b;
-  --card2-bg: #e0e7ff;
-  --card3-bg: #f3e8ff;
+    /* สีหลักของเว็บไซต์ */
+    --bg-color: #f6f8fb;
+    --text-dark: #111827;
+    --text-gray: #475569;
+    --primary-purple: #6366f1;
+    --primary-dark: #171720;
+    
+    /* สีพื้นหลังและขอบของการ์ดในส่วน Features */
+    --card1-bg: #dbeafe; 
+    --card1-border: #64748b; 
+    --card2-bg: #e0e7ff; 
+    --card3-bg: #f3e8ff; 
 }
 
+/* รีเซ็ตค่าเริ่มต้นของเบราว์เซอร์ */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
+/* ตั้งค่าพื้นฐานสำหรับ Body */
 body {
-  background-color: var(--bg-color);
-  color: var(--text-dark);
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Container */
+/* ==========================================================================
+   2. CSS สำหรับ Container (คุมความกว้างของเนื้อหาหลักให้อยู่ตรงกลาง)
+   ========================================================================== */
 .container {
-  width: 100%;
-  max-width: 1100px;
-  padding: 0 20px;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 20px;
 }
 
-/* Header / Navbar */
+/* ==========================================================================
+   3. CSS สำหรับแถบนำทาง (Navbar)
+   ========================================================================== */
 header {
-  width: 100%;
-  max-width: 1200px;
-  margin: 20px auto 60px auto;
-  padding: 0 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 24px auto 60px auto;
+    padding: 0 20px;
 }
 
 .navbar {
-  background-color: #ffffff;
-  border-radius: 50px;
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.05),
-    0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
 }
 
 .logo {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--text-dark);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
 .logo .asterisk {
-  color: var(--primary-purple);
-  font-size: 1.2rem;
-  margin-left: 2px;
-  line-height: 1;
+    color: var(--primary-purple);
+    font-size: 1.25rem;
+    margin-left: 2px;
+    line-height: 1;
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
+    list-style: none;
+    display: flex;
+    gap: 32px;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: var(--text-dark);
-  font-weight: 600;
-  font-size: 0.85rem;
-  transition: color 0.2s;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s;
 }
 
 .nav-links a:hover {
-  color: var(--primary-purple);
+    color: var(--primary-purple);
 }
 
 .nav-links a.active {
-  color: var(--primary-purple);
-  border-bottom: 2px solid var(--primary-purple);
-  padding-bottom: 2px;
+    color: var(--primary-purple);
+    border-bottom: 2px solid var(--primary-purple);
+    padding-bottom: 4px;
 }
 
-/* Hero Section */
+/* ==========================================================================
+   4. CSS สำหรับ Hero Section (ส่วนโปรโมตหลักด้านบน)
+   ========================================================================== */
 .hero {
-  text-align: center;
-  padding: 40px 0 80px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    text-align: center;
+    padding: 20px 0 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .badge {
-  background-color: #eef2ff;
-  color: var(--primary-purple);
-  padding: 6px 16px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 24px;
+    background-color: #ede9fe;
+    color: var(--primary-purple);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
 }
 
 .hero h1 {
-  font-size: 4rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  margin-bottom: 20px;
-  color: var(--text-dark);
+    font-size: 4.5rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--text-dark);
 }
 
 .hero h1 .highlight {
-  color: var(--primary-purple);
+    color: var(--primary-purple);
 }
 
 .hero p {
-  font-size: 1.1rem;
-  color: var(--text-dark);
-  font-weight: 500;
-  margin-bottom: 30px;
-  max-width: 600px;
+    font-size: 1.15rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    margin-bottom: 32px;
+    max-width: 600px;
 }
 
 .btn {
-  background-color: var(--primary-dark);
-  color: #ffffff;
-  padding: 12px 28px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.9rem;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.2s;
+    background-color: var(--primary-dark);
+    color: #ffffff;
+    padding: 14px 32px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
 .btn:hover {
-  background-color: #111827;
+    background-color: #000000;
 }
 
-/* Features Section */
+/* ==========================================================================
+   5. CSS สำหรับ Features Section (ส่วนแสดงคุณสมบัติ)
+   ========================================================================== */
 .features {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 100px;
 }
 
 .feature-card {
-  border-radius: 16px;
-  padding: 32px 24px;
-  text-align: left;
+    border-radius: 16px;
+    padding: 40px 32px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
+/* การกำหนดสีให้แต่ละการ์ด */
 .feature-card.card-1 {
-  background-color: var(--card1-bg);
-  border: 2px solid var(--card1-border);
+    background-color: var(--card1-bg);
+    border: 3px solid var(--card1-border);
 }
-
-.feature-card.card-2 {
-  background-color: var(--card2-bg);
-}
-
-.feature-card.card-3 {
-  background-color: var(--card3-bg);
-}
+.feature-card.card-2 { background-color: var(--card2-bg); }
+.feature-card.card-3 { background-color: var(--card3-bg); }
 
 .icon-wrapper {
-  width: 40px;
-  height: 40px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
+    width: 44px;
+    height: 44px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
 }
 
 .icon-wrapper svg {
-  width: 20px;
-  height: 20px;
-  color: var(--primary-purple);
+    width: 20px;
+    height: 20px;
+    color: var(--primary-purple);
 }
 
 .feature-card h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-  color: var(--text-dark);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-dark);
 }
 
 .feature-card p {
-  font-size: 0.85rem;
-  color: var(--text-gray);
-  line-height: 1.5;
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    line-height: 1.6;
 }
 
-/* Contact Section */
+/* ==========================================================================
+   6. CSS สำหรับ Contact Section (ส่วนฟอร์มติดต่อสอบถาม)
+   ========================================================================== */
 .contact {
-  background-color: #ffffff;
-  border-radius: 20px;
-  padding: 60px 40px;
-  max-width: 800px;
-  margin: 0 auto 80px auto;
-  width: 100%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 60px;
+    max-width: 800px;
+    margin: 0 auto 100px auto;
+    width: 100%;
 }
 
 .contact h2 {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 40px;
-  color: var(--text-dark);
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: var(--text-dark);
+    letter-spacing: -0.02em;
 }
 
 .form-group {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .form-group label {
-  display: block;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--text-gray);
-  margin-bottom: 8px;
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-gray);
+    margin-bottom: 8px;
 }
 
 .form-control {
-  width: 100%;
-  padding: 12px 16px;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  outline: none;
-  transition: border-color 0.2s;
-  font-family: inherit;
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: inherit;
 }
 
 .form-control::placeholder {
-  color: #9ca3af;
+    color: #94a3b8;
 }
 
 .form-control:focus {
-  border-color: var(--primary-purple);
+    border-color: var(--primary-purple);
 }
 
 textarea.form-control {
-  resize: vertical;
-  min-height: 120px;
+    resize: vertical;
+    min-height: 120px;
 }
 
 .btn-submit {
-  width: 100%;
-  padding: 14px;
-  font-size: 1rem;
-  margin-top: 10px;
-  border-radius: 8px;
+    width: 100%;
+    padding: 16px;
+    font-size: 1rem;
+    margin-top: 10px;
+    border-radius: 12px;
+    background-color: var(--primary-dark);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
 }
 
-/* Footer */
+.btn-submit:hover {
+    background-color: #000000;
+}
+
+/* ==========================================================================
+   7. CSS สำหรับ Footer (ส่วนท้ายของเว็บไซต์)
+   ========================================================================== */
 footer {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid #e5e7eb;
-  margin-top: auto;
-}
-
-.footer-copy {
-  font-size: 0.8rem;
-  color: var(--text-gray);
-}
-
-.footer-links {
-  display: flex;
-  gap: 20px;
-}
-
-.footer-links a {
-  text-decoration: none;
-  color: var(--text-dark);
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.footer-links a:hover {
-  color: var(--primary-purple);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  .features {
-    grid-template-columns: 1fr;
-  }
-  .navbar {
-    flex-direction: column;
-    gap: 15px;
-    border-radius: 15px;
-  }
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  footer {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
-  .contact {
-    padding: 40px 20px;
-  }
-
-  footer {
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
@@ -368,4 +331,19 @@ footer {
 .footer-links a:hover {
     color: var(--primary-purple);
 }
+
+/* ==========================================================================
+   8. Responsive (การจัดหน้าสำหรับมือถือและแท็บเล็ต)
+   ========================================================================== */
+@media (max-width: 860px) {
+    .hero h1 { font-size: 3rem; }
+    .features { grid-template-columns: 1fr; }
+    .contact { padding: 40px 30px; }
+    .navbar { flex-direction: column; gap: 16px; border-radius: 20px; }
+}
+
+@media (max-width: 600px) {
+    .hero h1 { font-size: 2.5rem; }
+    .nav-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
+    footer { flex-direction: column; gap: 20px; text-align: center; }
 }
